@@ -1,0 +1,178 @@
+[
+  {
+    "id": "calc-limit-001",
+    "course": "高等数学",
+    "question": "求极限 lim(x→0) sin(x)/x，其中 x∈ℝ 且 x≠0，角度使用弧度。",
+    "knowledge_ids": ["CALC.LIMIT.BASIC"],
+    "method": "基本三角极限，夹逼定理",
+    "difficulty": "基础",
+    "answer": "1",
+    "explanation": "当0<x<π/2时，cos(x)≤sin(x)/x≤1；两端在x→0+时都趋于1。sin(x)/x是偶函数，因此左极限也为1，双侧极限为1。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-limit-002",
+    "course": "高等数学",
+    "question": "求极限 lim(x→0) [√(1+x)−1]/x，其中函数定义域为 x≥−1 且 x≠0。",
+    "knowledge_ids": ["CALC.LIMIT.BASIC"],
+    "method": "根式有理化后求极限",
+    "difficulty": "基础",
+    "answer": "1/2",
+    "explanation": "对分子分母同乘√(1+x)+1，在原定义域上化为1/[√(1+x)+1]。x→0时分母趋于2，因此极限为1/2；0的左右两侧均有定义域内的点。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-limit-003",
+    "course": "高等数学",
+    "question": "求极限 lim(x→1) (x²−1)/(x−1)，其中 x∈ℝ 且 x≠1。",
+    "knowledge_ids": ["CALC.LIMIT.BASIC"],
+    "method": "因式分解并约去公因式",
+    "difficulty": "基础",
+    "answer": "2",
+    "explanation": "x²−1=(x−1)(x+1)。在x≠1时原式等于x+1，其在x→1的双侧极限为2；求极限不要求原式在x=1有定义。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-limit-004",
+    "course": "高等数学",
+    "question": "求极限 lim(x→+∞) (3x²+2x−1)/(x²+1)，其中函数定义域为 ℝ。",
+    "knowledge_ids": ["CALC.LIMIT.BASIC"],
+    "method": "分子分母同除以最高次幂",
+    "difficulty": "基础",
+    "answer": "3",
+    "explanation": "在x≠0时同除以x²，得到(3+2/x−1/x²)/(1+1/x²)。x→+∞时，1/x和1/x²均趋于0，因此极限为3；原分母x²+1始终大于0。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-derivative-001",
+    "course": "高等数学",
+    "question": "设 f(x)=x³−2x+5，x∈ℝ，求 f′(x)。",
+    "knowledge_ids": ["CALC.DERIVATIVE.BASIC"],
+    "method": "幂函数求导与求导的线性法则",
+    "difficulty": "基础",
+    "answer": "f′(x)=3x²−2，x∈ℝ。",
+    "explanation": "分别对各项求导：(x³)′=3x²，(−2x)′=−2，常数5的导数为0，相加得3x²−2。用差商展开(x+h)³也得到同一结果。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-derivative-002",
+    "course": "高等数学",
+    "question": "设 f(x)=sin(2x)，x∈ℝ，角度使用弧度，求 f′(x)。",
+    "knowledge_ids": ["CALC.DERIVATIVE.BASIC"],
+    "method": "复合函数求导，链式法则",
+    "difficulty": "基础",
+    "answer": "f′(x)=2cos(2x)，x∈ℝ。",
+    "explanation": "外层sin(u)对u的导数为cos(u)，内层u=2x对x的导数为2，两者相乘得2cos(2x)。用三角和差公式及基本三角极限计算差商可复核。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-derivative-003",
+    "course": "高等数学",
+    "question": "设 f(x)=x·e^x，x∈ℝ，求 f′(x)。",
+    "knowledge_ids": ["CALC.DERIVATIVE.BASIC"],
+    "method": "乘积求导法则",
+    "difficulty": "基础",
+    "answer": "f′(x)=(x+1)·e^x，x∈ℝ。",
+    "explanation": "由(uv)′=u′v+uv′，取u=x、v=e^x，得e^x+x·e^x=(x+1)·e^x。展开乘积的差商并使用(e^h−1)/h→1可复核。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-derivative-004",
+    "course": "高等数学",
+    "question": "设 f(x)=ln(1+x²)，x∈ℝ，求 f′(x)。",
+    "knowledge_ids": ["CALC.DERIVATIVE.BASIC"],
+    "method": "对数复合函数求导，链式法则",
+    "difficulty": "基础",
+    "answer": "f′(x)=2x/(1+x²)，x∈ℝ。",
+    "explanation": "因1+x²始终大于0，函数在实数域内有定义。设u=1+x²，按(ln u)′=u′/u，得2x/(1+x²)；分母在实数域内不为0。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-substitution-001",
+    "course": "高等数学",
+    "question": "求不定积分 ∫2x·cos(x²) dx，x∈ℝ。",
+    "knowledge_ids": ["CALC.INT.SUBSTITUTION"],
+    "method": "换元积分法，令 t=x²",
+    "difficulty": "基础",
+    "answer": "sin(x²)+C",
+    "explanation": "令t=x²，dt=2x dx，积分变为∫cos(t)dt=sin(t)+C。复核：(sin(x²))′=2x·cos(x²)，等于被积函数。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-substitution-002",
+    "course": "高等数学",
+    "question": "求不定积分 ∫3x²·e^(x³) dx，x∈ℝ。",
+    "knowledge_ids": ["CALC.INT.SUBSTITUTION"],
+    "method": "换元积分法，令 t=x³",
+    "difficulty": "基础",
+    "answer": "e^(x³)+C",
+    "explanation": "令t=x³，dt=3x² dx，积分变为∫e^t dt=e^t+C。复核：(e^(x³))′=3x²·e^(x³)，等于被积函数。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-substitution-003",
+    "course": "高等数学",
+    "question": "求不定积分 ∫x/(1+x²) dx，x∈ℝ。",
+    "knowledge_ids": ["CALC.INT.SUBSTITUTION"],
+    "method": "换元积分法，令 t=1+x²",
+    "difficulty": "基础",
+    "answer": "(1/2)ln(1+x²)+C",
+    "explanation": "令t=1+x²>0，dt=2x dx，积分变为(1/2)∫dt/t=(1/2)ln(t)+C。复核：所得原函数的导数为(1/2)·2x/(1+x²)=x/(1+x²)。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-substitution-004",
+    "course": "高等数学",
+    "question": "求不定积分 ∫cos(x)/[2+sin(x)] dx，x∈ℝ，角度使用弧度。",
+    "knowledge_ids": ["CALC.INT.SUBSTITUTION"],
+    "method": "换元积分法，令 t=2+sin(x)",
+    "difficulty": "基础",
+    "answer": "ln[2+sin(x)]+C",
+    "explanation": "令t=2+sin(x)，dt=cos(x)dx，且t≥1>0，积分为∫dt/t=ln(t)+C。复核：所得原函数的导数为cos(x)/[2+sin(x)]；分母在实数域内不为0。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-parts-001",
+    "course": "高等数学",
+    "question": "求不定积分 ∫x·cos(x) dx，x∈ℝ，角度使用弧度。",
+    "knowledge_ids": ["CALC.INT.PARTS"],
+    "method": "分部积分法",
+    "difficulty": "基础",
+    "answer": "x·sin(x)+cos(x)+C",
+    "explanation": "取u=x，dv=cos(x)dx，则积分为x·sin(x)−∫sin(x)dx=x·sin(x)+cos(x)+C。复核：导数为sin(x)+x·cos(x)−sin(x)=x·cos(x)。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-parts-002",
+    "course": "高等数学",
+    "question": "求不定积分 ∫x·e^(2x) dx，x∈ℝ。",
+    "knowledge_ids": ["CALC.INT.PARTS"],
+    "method": "分部积分法",
+    "difficulty": "基础",
+    "answer": "(x/2−1/4)·e^(2x)+C",
+    "explanation": "取u=x，dv=e^(2x)dx，得到x·e^(2x)/2−∫e^(2x)/2 dx=(x/2−1/4)·e^(2x)+C。复核：导数为[1/2+2(x/2−1/4)]e^(2x)=x·e^(2x)。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-parts-003",
+    "course": "高等数学",
+    "question": "求不定积分 ∫x²·e^x dx，x∈ℝ。",
+    "knowledge_ids": ["CALC.INT.PARTS"],
+    "method": "两次分部积分法",
+    "difficulty": "基础",
+    "answer": "(x²−2x+2)·e^x+C",
+    "explanation": "先取u=x²，dv=e^x dx，得x²e^x−2∫xe^x dx；再分部积分得∫xe^x dx=(x−1)e^x。合并后为(x²−2x+2)e^x+C。复核：导数为[(2x−2)+(x²−2x+2)]e^x=x²e^x。",
+    "source": "本项目原创演示题，MIT"
+  },
+  {
+    "id": "calc-parts-004",
+    "course": "高等数学",
+    "question": "求不定积分 ∫ln(x) dx，x>0。",
+    "knowledge_ids": ["CALC.INT.PARTS"],
+    "method": "分部积分法，取 u=ln(x)、dv=dx",
+    "difficulty": "基础",
+    "answer": "x·ln(x)−x+C，x>0。",
+    "explanation": "取u=ln(x)，dv=dx，则du=dx/x、v=x，积分为x·ln(x)−∫1 dx=x·ln(x)−x+C。复核：在x>0时导数为ln(x)+1−1=ln(x)。",
+    "source": "本项目原创演示题，MIT"
+  }
+]

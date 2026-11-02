@@ -1,0 +1,6 @@
+interface:
+  display_name: "高等数学题目复习助手"
+  short_description: "大学高数题目：知识点、B站视频和不含答案的练习"
+
+policy:
+  allow_implicit_invocation: true
